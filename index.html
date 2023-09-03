@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="main.js"></script>
+    <title>security</title>
+</head>
+<body>
+  <div id="container">
+    <div style="border:2px #0dcaf0 solid; margin-top:10px;background-color:white;height: 6%;box-shadow: 0px 0px 30px 1px black;">
+      <h1 class="method" style="margin-top:10px;text-align: center;color: black;">&#10084;&#65039; Majestic Encryption/Decpryption Tool &#10084;&#65039;</h1>
+    </div>
+    <section class="py-5  px-5 w-75 m-auto border border-info border-3">
+    <label for="method" class="method">Choose a Method:</label>
+    <select onchange="chosenMethod(method.selectedIndex)" name="method" id="method">
+      <option value="monoalphabetic">Monoalphabetic</option>
+      <option value="caeser">Caeser</option>
+    </select>
+    <br>
+    <br>
+    <br>
+
+    <label class="method">Key:</label><br>
+    <input placeholder="key" id="keyInput" class="" type="text">
+    
+    
+    <div class="oprera m-3">
+    <label class="Operation">Choose a Operation</label>
+    <br>
+    <div class="form-check-inline">
+        <input  type="radio" onclick="oper(1)" name="check" id="decryption">
+        <label class="form-check-label" for="decryption">Decryption</label>
+
+      </div>
+      <div class="form-check-inline">
+        <input checked type="radio" onclick="oper(0)" name="check" id="encryption">
+        <label class="form-check-label" for="encryption">Encryption</label>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+<div class="main">
+  <label class="method" for="plainText">Plaintext:</label>
+  <input type="text" id="plainText" placeholder="plainText" style="width: 210px; margin: 6px; height: 30px;">
+
+
+<div class="btn-1">  <button onclick="start()" class="btn btn-info"> <i class="fas fa-arrow-left"></i> <i class="fas fa-arrow-right"></i> </button></div>
+
+ 
+  <label class="method" for="cipherText">Ciphertext:</label><br>
+  <input disabled type="text" id="cipherText" placeholder="cipherText" style="width: 210px; margin: 6px; height: 30px;">
+
+</div>
+
+
+
+</section>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
